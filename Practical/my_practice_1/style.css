@@ -49,7 +49,39 @@ div.navcont{
 .btn button{
     padding: 10px 20px;
     /* background-color: blue; */
+    background: none;
+    font-size: large;
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+/* 
+.btn button:nth-child(1){
+    background-color: blue;
+    
+}
+.btn button a:nth-child(0){
+    color: white;
+    text-decoration: none;
+}
+.btn button a:nth-child(1) {
+    color: blue;
+    text-decoration: none;
+} 
+*/
+
+button.btn1{
+    background-color: blue;
+    color: white;
+} 
+
+ button.btn1 a{
+    color: white;
+    text-decoration: none;
+
+}
+button.btn2 a {
+    color: blue;
+    text-decoration: none;
+
 }
