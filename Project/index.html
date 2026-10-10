@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smart Campus Student Portal for KICSIT, Kahuta.">
+  <title>Smart Campus Portal | KICSIT</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Smart Campus Portal home">
+      <span class="brand-mark">SC</span>
+      <span><strong>Smart Campus</strong><small>KICSIT · Kahuta · Rawalpindi</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a class="active" href="index.html">Dashboard</a>
+      <a href="courses.html">Courses</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="tasks.html">Tasks</a>
+      <a href="profile.html">Profile</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle light and dark theme">◐ <span>Theme</span></button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="welcome-panel" id="home">
+      <div class="welcome-copy">
+        <span class="eyebrow">STUDENT PORTAL · 5TH SEMESTER</span>
+        <h1>Welcome back,<br><span id="welcomeName">Malik Saad Khawar</span></h1>
+        <p>Keep track of your courses, weekly classes, campus updates, and tasks from one place.</p>
+        <div class="hero-actions">
+          <a class="button button-light" href="courses.html">Explore courses <span>→</span></a>
+          <a class="button button-outline-light" href="tasks.html">View my tasks</a>
+        </div>
+      </div>
+      <div class="welcome-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="book-icon">▤</div><div class="spark spark-one">✦</div><div class="spark spark-two">✧</div>
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <div><span class="eyebrow">AT A GLANCE</span><h2>Your semester overview</h2></div>
+      <p id="currentDate" class="muted">Loading date…</p>
+    </div>
+    <section class="stats-grid" aria-label="Student overview">
+      <article class="stat-card"><div class="stat-icon purple">▦</div><p>Current semester</p><strong>5th</strong><small>BS Computer Science</small></article>
+      <article class="stat-card"><div class="stat-icon blue">◎</div><p>Registered courses</p><strong id="courseCount">6</strong><small>Current semester</small></article>
+      <article class="stat-card"><div class="stat-icon pink">✓</div><p>Attendance</p><strong>88%</strong><small>Current semester average</small></article>
+      <article class="stat-card"><div class="stat-icon gold">⌁</div><p>Pending tasks</p><strong id="pendingCount">0</strong><small>Saved in this browser</small></article>
+    </section>
+
+    <div class="content-grid">
+      <section class="panel">
+        <div class="panel-heading"><div><span class="eyebrow">STAY INFORMED</span><h2>Campus announcements</h2></div><a class="text-link" href="#announcements">See all <span>→</span></a></div>
+        <div class="filter-row" id="announcementFilters" aria-label="Filter announcements">
+          <button class="filter-chip active" data-category="All">All</button>
+          <button class="filter-chip" data-category="Academic">Academic</button>
+          <button class="filter-chip" data-category="Examination">Examination</button>
+          <button class="filter-chip" data-category="Event">Event</button>
+          <button class="filter-chip" data-category="General">General</button>
+        </div>
+        <div class="announcement-list" id="announcementList"></div>
+      </section>
+
+      <section class="panel" id="events">
+        <div class="panel-heading"><div><span class="eyebrow">SAVE THE DATE</span><h2>Upcoming events</h2></div><span class="heading-icon">✦</span></div>
+        <div class="event-list">
+          <article class="event-item"><div class="date-tile"><b>19</b><span>OCT</span></div><div><h3>Sports Week</h3><p>19–23 October 2026</p><span class="event-tag">Campus event</span></div></article>
+          <article class="event-item"><div class="date-tile"><b>27</b><span>OCT</span></div><div><h3>Previous Batch Convocation</h3><p>27–28 October 2026</p><span class="event-tag">Ceremony</span></div></article>
+          <article class="event-item"><div class="date-tile date-tile-muted"><b>—</b><span>NOV</span></div><div><h3>Midterm Examinations</h3><p>Starting in November · Exact date to be announced</p><span class="event-tag">Examination</span></div></article>
+        </div>
+      </section>
+    </div>
+
+    <section class="quick-section">
+      <div class="section-heading"><div><span class="eyebrow">JUMP RIGHT IN</span><h2>Quick access</h2></div></div>
+      <div class="quick-grid">
+        <a class="quick-card" href="courses.html"><span class="quick-icon purple">▤</span><span><strong>My courses</strong><small>Browse course details</small></span><span class="arrow">↗</span></a>
+        <a class="quick-card" href="schedule.html"><span class="quick-icon blue">▦</span><span><strong>Weekly schedule</strong><small>Check your class times</small></span><span class="arrow">↗</span></a>
+        <a class="quick-card" href="tasks.html"><span class="quick-icon pink">✓</span><span><strong>Task manager</strong><small>Plan your study work</small></span><span class="arrow">↗</span></a>
+        <a class="quick-card" href="profile.html"><span class="quick-icon gold">♙</span><span><strong>Student profile</strong><small>Try the registration form</small></span><span class="arrow">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><span class="brand-mark">SC</span><span><strong>Smart Campus Portal</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></div>
+    <p>KICSIT, Kahuta — a campus of the Institute of Space Technology (IST), Islamabad.</p>
+  </footer>
+</body>
+</html>

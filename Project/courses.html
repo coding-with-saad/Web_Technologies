@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses | Smart Campus Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script><script src="js/courses.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SC</span><span><strong>Smart Campus</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Dashboard</a><a class="active" href="courses.html">Courses</a><a href="schedule.html">Schedule</a><a href="tasks.html">Tasks</a><a href="profile.html">Profile</a><button class="theme-toggle" id="themeToggle" type="button">◐ <span>Theme</span></button></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro"><span class="eyebrow">LEARN & GROW</span><h1>My Courses</h1><p>Browse the six courses listed for your current semester. Use search and filters to find a course quickly.</p></section>
+    <section class="panel">
+      <div class="toolbar">
+        <label class="search-box"><span>⌕</span><input id="courseSearch" type="search" placeholder="Search course name or code…" aria-label="Search courses"></label>
+        <label class="select-wrap"><span class="sr-only">Filter by semester</span><select id="semesterFilter"><option value="All">All semesters</option><option value="5">5th semester</option></select></label>
+        <label class="select-wrap"><span class="sr-only">Filter by status</span><select id="statusFilter"><option value="All">All statuses</option><option value="Current">Current</option></select></label>
+      </div>
+      <div class="results-line"><span id="courseResults">Showing 6 courses</span><span class="muted">Course details supplied by student</span></div>
+      <div class="course-grid" id="courseGrid"></div>
+      <p id="noCourses" class="empty-state hidden">No courses match your search. Try a different name or code.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">SC</span><span><strong>Smart Campus Portal</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></div><p>KICSIT, Kahuta — a campus of IST, Islamabad.</p><small class="footer-note"></small></footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Schedule | Smart Campus Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script><script src="js/schedule.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SC</span><span><strong>Smart Campus</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Dashboard</a><a href="courses.html">Courses</a><a class="active" href="schedule.html">Schedule</a><a href="tasks.html">Tasks</a><a href="profile.html">Profile</a><button class="theme-toggle" id="themeToggle" type="button">◐ <span>Theme</span></button></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro"><span class="eyebrow">PLAN YOUR WEEK</span><h1>Weekly Class Schedule</h1><p>Each lecture and tutorial is 50 minutes, starting at 9:15 AM. Monday–Thursday include a 15-minute break after the fourth slot; Friday includes a 1 hour 5 minute Namaz break.</p></section>
+    <div class="notice notice-warning"><strong>Timetable timing:</strong> Times are calculated from 9:15 AM. Monday–Thursday include a 15-minute break after the fourth slot; Friday includes a 1 hour 5 minute Namaz break. With these breaks, each day calculates to 2:30 PM, matching the stated dismissal time.</div>
+    <section class="panel">
+      <div class="schedule-top"><div><span class="eyebrow">MONDAY — FRIDAY</span><h2>Class timetable</h2></div><span class="pill pill-neutral">Lecture length: 50 min</span></div>
+      <div class="schedule-grid" id="scheduleGrid"></div>
+      <div class="schedule-legend"><span><i class="legend-dot theory"></i>Theory</span><span><i class="legend-dot lab"></i>Lab</span><span><i class="legend-dot tutorial"></i>Tutorial</span><span><i class="legend-dot break"></i>Break</span></div>
+      <p class="muted schedule-footnote">Room numbers were not provided, so they are not invented in this timetable.</p>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">SC</span><span><strong>Smart Campus Portal</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></div><p>KICSIT, Kahuta — a campus of IST, Islamabad.</p><small class="footer-note"></small></footer>
+</body>
+</html>

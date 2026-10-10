@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Profile | Smart Campus Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script><script src="js/profile.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SC</span><span><strong>Smart Campus</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Dashboard</a><a href="courses.html">Courses</a><a href="schedule.html">Schedule</a><a href="tasks.html">Tasks</a><a class="active" href="profile.html">Profile</a><button class="theme-toggle" id="themeToggle" type="button">◐ <span>Theme</span></button></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro"><span class="eyebrow">STUDENT DETAILS</span><h1>Profile & Registration</h1></section>
+    <section class="profile-layout">
+      <aside class="profile-card panel">
+        <div class="avatar">MSK</div><span class="pill pill-purple">BS Computer Science</span><h2>Malik Saad Khawar</h2><p class="muted">5th Semester · KICSIT, Kahuta</p>
+        <div class="profile-divider"></div><div class="profile-detail"><span>Institute</span><strong>KICSIT</strong></div><div class="profile-detail"><span>Affiliation</span><strong>IST, Islamabad</strong></div>
+      </aside>
+      <section class="panel">
+        <div class="panel-heading"><div><span class="eyebrow">DEMO FORM</span><h2>Student registration</h2></div></div>
+        <form id="profileForm" class="form-grid" novalidate>
+          <label>Full name<input id="fullName" name="fullName" type="text" placeholder="Enter your full name" value="Malik Saad Khawar" required><small class="field-error" id="fullNameError"></small></label>
+          <label>Registration number<input id="regNo" name="regNo" type="text" placeholder="Enter registration number" value="242201079" required><small class="field-error" id="regNoError"></small></label>
+          <label>Email address<input id="email" name="email" type="email" placeholder="student@example.com" value="242201079@ist.edu.pk" required><small class="field-error" id="emailError"></small></label>
+          <label>Department<input id="department" name="department" type="text" value="BS Computer Science" required><small class="field-error" id="departmentError"></small></label>
+          <label>Semester<select id="semester" name="semester" required><option value="">Choose semester</option><option value="1">1st Semester</option><option value="2">2nd Semester</option><option value="3">3rd Semester</option><option value="4">4th Semester</option><option value="5" selected>5th Semester</option><option value="6">6th Semester</option><option value="7">7th Semester</option><option value="8">8th Semester</option></select><small class="field-error" id="semesterError"></small></label>
+          <label>Phone number<input id="phone" name="phone" type="tel" placeholder="Enter phone number" value="03369253691" required><small class="field-error" id="phoneError"></small></label>
+          <label>Password<span class="password-wrap"><input id="password" name="password" type="password" placeholder="Enter password (8+ characters)" required minlength="8"><button class="password-toggle" type="button" data-password-target="password" aria-label="Show password" aria-pressed="false">◉</button></span><small class="field-error" id="passwordError"></small></label>
+          <label>Confirm password<span class="password-wrap"><input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" required><button class="password-toggle" type="button" data-password-target="confirmPassword" aria-label="Show confirm password" aria-pressed="false">◉</button></span><small class="field-error" id="confirmPasswordError"></small></label>
+          <div class="form-full"><button class="button button-primary" type="submit">Validate registration</button><p class="form-message" id="profileMessage" role="status"></p></div>
+        </form>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">SC</span><span><strong>Smart Campus Portal</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></div><p>KICSIT, Kahuta — a campus of IST, Islamabad.</p><small class="footer-note"></small></footer>
+</body>
+</html>

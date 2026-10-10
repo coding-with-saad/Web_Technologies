@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager | Smart Campus Portal</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script><script src="js/tasks.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">SC</span><span><strong>Smart Campus</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav"><a href="index.html">Dashboard</a><a href="courses.html">Courses</a><a href="schedule.html">Schedule</a><a class="active" href="tasks.html">Tasks</a><a href="profile.html">Profile</a><button class="theme-toggle" id="themeToggle" type="button">◐ <span>Theme</span></button></nav>
+  </header>
+  <main class="page-shell">
+    <section class="page-intro"><span class="eyebrow">STAY ORGANIZED</span><h1>My Task Manager</h1><p>Add assignments and reminders, set priorities, and keep track of completed work. Tasks are saved in this browser using localStorage.</p></section>
+    <section class="task-layout">
+      <div class="panel">
+        <div class="panel-heading"><div><span class="eyebrow">NEW ITEM</span><h2>Add a task</h2></div><span class="heading-icon">＋</span></div>
+        <form id="taskForm" class="form-stack">
+          <label>Task title<input id="taskTitle" name="taskTitle" type="text" placeholder="e.g. Prepare HCI presentation" required maxlength="100"></label>
+          <label>Related course<select id="taskCourse" name="taskCourse" required><option value="">Choose a course</option></select></label>
+          <label>Due date<input id="taskDue" name="taskDue" type="date" required></label>
+          <label>Priority<select id="taskPriority" name="taskPriority"><option value="Medium">Medium</option><option value="High">High</option><option value="Low">Low</option></select></label>
+          <button class="button button-primary" type="submit">＋ Add task</button>
+          <p class="form-message" id="taskMessage" role="status"></p>
+        </form>
+      </div>
+      <div class="panel task-list-panel">
+        <div class="panel-heading"><div><span class="eyebrow">YOUR WORKLOAD</span><h2>Tasks overview</h2></div></div>
+        <div class="task-summary"><div><strong id="totalTasks">0</strong><span>Total</span></div><div><strong id="pendingTasks">0</strong><span>Pending</span></div><div><strong id="completedTasks">0</strong><span>Completed</span></div></div>
+        <div class="filter-row" id="taskFilters"><button class="filter-chip active" data-filter="All">All</button><button class="filter-chip" data-filter="Pending">Pending</button><button class="filter-chip" data-filter="Completed">Completed</button></div>
+        <div id="taskList" class="task-list"></div>
+        <p id="taskEmpty" class="empty-state">No tasks here yet. Add a task to get started.</p>
+        <button id="clearCompleted" class="button button-quiet hidden" type="button">Clear completed tasks</button>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">SC</span><span><strong>Smart Campus Portal</strong><small>KICSIT · Kahuta · Rawalpindi</small></span></div><p>KICSIT, Kahuta — a campus of IST, Islamabad.</p><small class="footer-note"></small></footer>
+</body>
+</html>
