@@ -3,8 +3,6 @@
 ![PHP](https://images.openai.com/static-rsc-4/N21e_q_3CZ4zwAoLmvY-JUe0tanLvbMMTgZej2eQ4xcbF2NBhXNmqcIAnLu3vzBCqAdksGSa5mTvHHRn6AxnmH3HOThlAEnd3XTLkpPrPZvno2EHF51cc1GAH-UsZiKLijnvvvTtKRM_rn81EzwjcP1gTx1AzmOfTorgExF1Ksi6zPKiRb2S6p1h7a07vbLd?purpose=fullsize)
 
 
-
-
 PHP ek server-side programming language hai. Iska istemal dynamic websites aur web applications banane ke liye hota hai.
 
 Misaal ke taur par, jab aap kisi website par login karte ho, to website ko yeh check karna hota hai ke aapka username aur password sahi hain ya nahi. PHP server par yeh logic chala sakti hai aur database se information hasil kar sakti hai.
