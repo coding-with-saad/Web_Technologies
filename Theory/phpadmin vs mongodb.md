@@ -15,14 +15,7 @@ Browser se database, tables, records aur SQL queries manage karne ke liye use ho
 
 
 
-
-
-
-
-
-
-
-
+![MongoDB](https://images.openai.com/static-rsc-4/136BlWeMvcmIH2DH7Rg6HuRSqHqTtAIC7RGRTUvH4rRdJNo6c5USca82FDUZkLd2ymgppngcGzZpzJQKj7FFtoWavAOfmTW1hSNTulrLckMa_TCAa5KCn8P5-eoAX7CZcTcLbQx3FXIO61z58kmkoRF7Cdj8spG6E-Ru3wO_FRQ?purpose=inline)
 
 ## MongoDB
 
@@ -42,6 +35,8 @@ Data relationships	Relational tables aur joins	Documents, references aur support
 Schema	Aam tor par defined table structure	Flexible document structure
 Example use	PHP + MySQL student portal	Flask/Node.js + MongoDB application
 
+
+
 Official resources: phpMyAdmin documentation · MongoDB documentation
 Ek simple example
 Relational database mein student ka data kuch aise ho sakta hai:
@@ -50,11 +45,13 @@ student_id	name	semester
 102	Ali	3
 
 MongoDB mein isi tarah ka data document ki form mein ho sakta hai:
+```Json
 {
   "student_id": 101,
   "name": "Saad",
   "semester": 5
 }
+```
 
 
 Yaad rakho: phpMyAdmin ko MongoDB ka alternative kehna technically sahi nahi. Agar tum MySQL aur MongoDB compare karte ho, tab database-versus-database comparison hota hai.
