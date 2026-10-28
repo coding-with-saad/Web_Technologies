@@ -1,17 +1,13 @@
-Part 2 — phpMyAdmin aur MongoDB mein kya difference hai?
+# phpMyAdmin aur MongoDB mein kya difference hai?
 Sab se pehle ek important correction:
 
 phpMyAdmin aur MongoDB ek hi category ke tools nahi hain. phpMyAdmin database management ka web interface hai, jabke MongoDB ek database system hai.
 
 
 
-
-
-
-
-
 ![phpMyAdmin](https://images.openai.com/static-rsc-4/Otvf-sWPTNQdKPu0DrG11RpVaVB6dTDpQmYbnRHVgsAmU054tqxhS4F6mdkvBKEiKSsaQf7UTCsd3mmXz-xEC_p34LPpvE1XgUCBF-JefrZmlH55pUjV3rSrNudj-ebxjHbY94xoyGhSsSNyFQSueeMiR_ULAKSzvDYHRpCr-WM?purpose=inline)
-phpMyAdmin
+
+## phpMyAdmin
 
 MySQL/MariaDB management interface
 
@@ -28,7 +24,7 @@ Browser se database, tables, records aur SQL queries manage karne ke liye use ho
 
 
 
-MongoDB
+## MongoDB
 
 NoSQL document database
 
