@@ -1,59 +1,90 @@
-# 1. PHP kya hai?
+# PHP, phpMyAdmin, MongoDB aur recent PHP cyberattack — Roman Urdu mein complete guide
 
-![PHP](https://images.openai.com/static-rsc-4/N21e_q_3CZ4zwAoLmvY-JUe0tanLvbMMTgZej2eQ4xcbF2NBhXNmqcIAnLu3vzBCqAdksGSa5mTvHHRn6AxnmH3HOThlAEnd3XTLkpPrPZvno2EHF51cc1GAH-UsZiKLijnvvvTtKRM_rn81EzwjcP1gTx1AzmOfTorgExF1Ksi6zPKiRb2S6p1h7a07vbLd?purpose=fullsize)
+Tum Computer Science ke student ho, is liye main is topic ko bilkul basic level se samjhaunga. Pehle web development ke concepts clear karenge, phir October 2026 ke recent PHP security incident ki history, hackers ne kya discover kiya, vulnerability kaam kaise karti hai, aur uska solution kya hai.
 
+Sab se important baat: 21 October 2026 ko PHP team ne do critical security vulnerabilities ke fixes release kiye. In vulnerabilities se kuch conditions mein attacker bina login kiye vulnerable server par apna code execute kar sakta tha. Inhein commonly PHP2Shell kaha ja raha hai. 23 October ko ek additional vulnerability bhi disclose hui, jiske liye alag mitigation zaroori hai.&#x20;
 
-PHP ek server-side programming language hai. Iska istemal dynamic websites aur web applications banane ke liye hota hai.
+[image](https://www.google.com/s2/favicons?domain=https://www.php.net\&sz=32)
 
-Misaal ke taur par, jab aap kisi website par login karte ho, to website ko yeh check karna hota hai ke aapka username aur password sahi hain ya nahi. PHP server par yeh logic chala sakti hai aur database se information hasil kar sakti hai.
-Ek simple example
-Maan lo aap ek university student portal bana rahe ho.
-- HTML: Login form banayega.
-- CSS: Form ko design karegi.
-- JavaScript: Button click aur browser mein interaction handle karegi.
-- PHP: Server par login details verify kar sakti hai.
-- Database: Students ke usernames aur doosra record store karega.
-
-![Web Server](https://images.openai.com/static-rsc-4/wCQW5UbGKlaKONlXn07jG7jXr25b133PI9RwcgXAMuBpkEGXRKKE2rHBUxCK5kLpd0IGQUSlzPSNc-WtDm-0xe0LsvqtIQq5ReFKyTnUhD3laNLXc1vzf7fLAaAr4jkWhvydgzriYPA1Xw2bLSHSaHX3t_pP8cZYs0nYdQCEBqU?purpose=inline)
-
-<b>Student ka browser
-
-Username aur password submit karta hai
-
-HTTP request / response
-
-Web server + PHP
-
-Login logic aur validation
-
-
-Database
-
-Student ka stored record check hota hai
-</b>
-
-
-Yeh ek simplified diagram hai. PHP MySQL ke ilawa doosre databases ke saath bhi kaam kar sakti hai.
-PHP code ki chhoti si example
+PHP+2
 
 
 
-```php
+# Part 1 — PHP kya hai?
+
+[PHP Logo PNG Vector (SVG) Free Download](https://images.openai.com/static-rsc-4/OpgKuyJwjfEOwfqNQ8RHM5QUrk-PDk3ybQ2BPXsyyx8b0E2F2JX7NzVMBAabTmBiPa283vw_tcrzd6Jg6HMzGxU-JQL94CeX-2vXDW8mR1fwX7-AmAmiIWZciyvo18dJjxDHm0ArrbengvWmCFWWaiMO2OT1zk9c_c47t_1Sjo4?purpose=inline)
+
+[Introduction to Website Architecture and Major Components | by Rangga Wijaya | Medium](https://images.openai.com/static-rsc-4/wCQW5UbGKlaKONlXn07jG7jXr25b133PI9RwcgXAMuBpkEGXRKKE2rHBUxCK5kLpd0IGQUSlzPSNc-WtDm-0xe0LsvqtIQq5ReFKyTnUhD3laNLXc1vzf7fLAaAr4jkWhvydgzriYPA1Xw2bLSHSaHX3t_pP8cZYs0nYdQCEBqU?purpose=inline)
+
+[Client Side vs. Server Side in Web Development: A Beginner's Guide](https://images.openai.com/static-rsc-4/mQjaRUqaVDyQBq_OVDch7eRrzCjG5BrNR0cXxw9rRJpqm1lyLr0YhJc9nMq1pShd0kFRyqOPYuxnY27Zk2mHb0asCgXy1weV1AAS8Yn57L5Uv3z5deai2h0xRFi5k-ujxskCyrn1hP8i5bL5tiR0nqKPtfSG8dpckbZ3vAmmKKM?purpose=inline)
+
+PHP ek server-side programming language hai jo websites ke backend mein use hoti hai.
+
+PHP ka naam originally Personal Home Page se aaya tha; ab iska official recursive naam PHP: Hypertext Preprocessor hai.
+
+Misal ke taur par, tum ek university portal bana rahe ho jahan student login karta hai, attendance check karta hai aur assignments dekhta hai.
+
+Is system mein:
+
+- HTML page ka structure banata hai.
+- CSS page ko design karta hai.
+- JavaScript browser mein interactions handle karta hai.
+- PHP server par login verify kar sakta hai aur database se attendance nikal sakta hai.
+- Database students, attendance aur courses ka data save karta hai.
+
+## PHP kaam kaise karti hai?
+
+1\. Browser
+
+Student login request bhejta hai
+
+2\. Web server + PHP
+
+Credentials check aur backend logic execute hota hai
+
+3\. Database
+
+User record aur attendance retrieve hoti hai
+
+4\. Browser ko response
+
+Student ka dashboard display hota hai
+
+Ye simplified example hai. Real applications mein web server, PHP runtime aur database ki configuration mukhtalif ho sakti hai.
+
+PHP server par execute hoti hai; aam tor par browser ko PHP ka source code nahi milta, balkay us se generate hua HTML ya doosra response milta hai.
+
+### PHP ka chhota sa example
+
+```
 <?php
 $name = "Saad";
 echo "Welcome, " . $name;
 ?>
 ```
 
-Is code ka output hoga:
+Output:
+
+```
 Welcome, Saad
+```
 
+Yahan:
 
-Yahan echo text output karta hai aur $name ek variable hai. PHP ka code server par execute hota hai; aam tor par browser ko iska generated output milta hai, original server-side code nahi.
+- `$name` variable hai.
+- `"Saad"` us variable ki value hai.
+- `echo` output generate karta hai.
+- `<?php ... ?>` PHP code ko mark karta hai.
 
+Official documentation: [PHP Manual — Introduction](https://www.php.net/manual/en/introduction.php?utm_source=chatgpt.com)
 
+## PHP kahan use hoti hai?
 
-![Client Server Model in Web development](https://images.openai.com/static-rsc-4/Hyou_7zQL-9VVEgJFsyaYZhg2XQKZj1HBvmVwx1FGsy4KT64uP9auVnJHl3RGjMPnDv_Q--MoxePmWnQzU-UalZLmn7bkK5I5GJp7g6Yah30WwkY_pbMJ-c22ugBKtA14p7ZMnwn0vDDHGEntXFUOofMFa-P-PmmNvEKEt5XcfeI8B3pGwdtV22WVCt-JWST?purpose=fullsize)
+- WordPress websites aur content management systems.
+- E-commerce websites.
+- Login, registration aur admin dashboards.
+- APIs aur backend services.
+- Existing enterprise aur government web applications.
 
-Official learning resource: PHP Manual — Getting Started.<Br>
-[PHP Official](https://www.php.net/manual/en/introduction.php)
+PHP ka matlab ye nahi ke website purani ya insecure hai. Security ka depend language ke saath uske version, code, configuration aur maintenance par bhi hota hai.
+
